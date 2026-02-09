@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: Testing
+        description: "Testing"
         type: string
-        default: Test
+        default: 'Test'
 
 jobs:
   manual-workflow:
@@ -16,4 +16,4 @@ jobs:
 
     steps:
     - name: Greeting
-      run: echo "Hello world"
+      run: echo ${{inputs.name}}
