@@ -1,4 +1,4 @@
-name: Hellow world
+name: Manual work flow
 
 on:
   # push: 
@@ -9,6 +9,14 @@ on:
         description: "Testing"
         type: string
         default: 'Test'
+      age:
+        description: 'Enter age'
+        type: number
+        required: true
+      married:
+        description: 'Is she married ?'
+        type: boolean
+        
 
 jobs:
   manual-workflow:
@@ -17,3 +25,7 @@ jobs:
     steps:
     - name: Greeting
       run: echo ${{inputs.name}}
+    - name: Greeting
+      run: echo ${{inputs.age}}
+    - name: Greeting
+      run: echo ${{inputs.married}}
