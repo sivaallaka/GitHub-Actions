@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Schedule workflow
         run: |
-          current-date-time= $date
+          current-date-time= $(date)
           echo 'current date is' $current-date-time
