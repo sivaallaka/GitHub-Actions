@@ -4,9 +4,14 @@ on:
   # push: 
   #   branches: ["main"]
   workflow_dispatch:
+    inputs:
+      name:
+        description: Testing
+        type: string
+        default: Test
 
 jobs:
-  demo:
+  manual-workflow:
     runs-on: ubuntu-latest
 
     steps:
