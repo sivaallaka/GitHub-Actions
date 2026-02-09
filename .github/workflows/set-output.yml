@@ -1,0 +1,23 @@
+name: set output
+
+on:
+
+  push:
+    branches: ['main']
+
+jobs:
+  set-output:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setoutput
+        id: set-output
+        shell: bash
+        run: |
+          echo "Name=siva" >> "$env:GIT_USER
+          echo"Age=27" >> $AGE
+
+      - name: Access output
+        run: |
+          echo "value of output is $(steps.set-output.outputs.Name)"
+          echo"value of output is $(steps.set-ouput.outputs.Age)
