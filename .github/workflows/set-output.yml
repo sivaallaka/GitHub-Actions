@@ -15,9 +15,9 @@ jobs:
         shell: bash
         run: |
           echo "Name=siva" >> "$env:GIT_USER"
-          echo "Age=27" >> "$AGE"
+          echo "Age=27" >> "$env:AGE"
 
       - name: Access output
         run: |
           echo "value of output is $(steps.set-output.outputs.Name)"
-          echo"value of output is $(steps.set-ouput.outputs.Age)
+          echo"value of output is $(steps.set-ouput.outputs.AGE)
