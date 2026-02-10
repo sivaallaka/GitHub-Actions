@@ -1,0 +1,28 @@
+name: job outputs
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: set output
+        id: set-output
+        shell: bash
+        run: |
+          echo "name=siva" >> $GITHUB_OUTPUT
+          echo "age=27" >> $GITHUB_OUTPUT
+
+      - name: access output
+        run: echo "value is ${{steps.set-output.outputs.name}}"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: access output2
+        run: echo "value is ${{steps.set-output.outputs.name}}"
+        
+  
