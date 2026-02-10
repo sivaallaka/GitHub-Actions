@@ -7,6 +7,8 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    outputs:
+      job1_name: ${{steps.set-output.outputs.name}}
 
     steps:
       - name: set output
@@ -21,8 +23,9 @@ jobs:
 
   job2:
     runs-on: ubuntu-latest
+    needs: job1
     steps:
       - name: access output2
-        run: echo "value is ${{steps.set-output.outputs.name}}"
+        run: echo "value is ${{needs.job1.outputs.job1_name}}"
         
   
