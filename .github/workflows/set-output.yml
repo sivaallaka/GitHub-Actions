@@ -20,4 +20,4 @@ jobs:
       - name: Access output
         run: |
           echo "value of output is ${{steps.set-output.outputs.Name}}"
-          echo"value of output is ${{steps.set-output.outputs.Age}}"
+          echo "value of output is ${{steps.set-output.outputs.Age}}"
