@@ -14,8 +14,8 @@ jobs:
         id: set-output
         shell: bash
         run: |
-          echo "Name=siva" >> "$env:GIT_USER"
-          echo "Age=27" >> "$env:AGE"
+          echo "Name=siva"
+          echo "Age=27"
 
       - name: Access output
         run: |
