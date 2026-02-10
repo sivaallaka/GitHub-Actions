@@ -14,10 +14,10 @@ jobs:
         id: set-output
         shell: bash
         run: |
-          echo "Name=siva"
-          echo "Age=27"
+          echo "Name=siva" >> $GITHUB_OUTPUT
+          echo "Age=27" >> $GITHUB_OUTPUT
 
       - name: Access output
         run: |
           echo "value of output is $(steps.set-output.outputs.Name)"
-          echo"value of output is $(steps.set-ouput.outputs.AGE)
+          echo"value of output is $(steps.set-ouput.outputs.Age)
